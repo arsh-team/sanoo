@@ -36,3 +36,6 @@ def handler(event):
             results.append({"index": idx, "error": str(e)})
 
     return {"results": results}
+
+# Register the handler with RunPod
+runpod.serverless.start({"handler": handler})
